@@ -337,3 +337,12 @@ public static Integer valueOf(int i) {
 * 예외 처리를 통해 에러가 발생하지 않도록 한다.
 * 사용자가 잘못된 값을 입력했을 때 java exception으로 에러 처리를 한다.
 * java8에 추가된 Optional을 적용해 NullPointerException이 발생하지 않도록 한다.
+
+### Step4 리뷰사항
+* [ ] [fix01][Lotto.java] 애초에 자료구조를 Set으로 정의하고, 출력을 위한 정렬은 출력 객체에서 담당할 수 있도록 해보기
+    * 예를 들면, <pre><code>Lotto (Set<Numbers>) -> LottoResponse (List<Integer>)</code></pre>
+* [ ] [fix02][LottoNumber.java] Boxed type 은 == 비교를 하면 안됨, 애초에 Boxed type을 사용한 이유도 있어야 함
+    *  https://rules.sonarsource.com/java/RSPEC-4973
+    * https://wiki.sei.cmu.edu/confluence/display/java/EXP03-J.+Do+not+use+the+equality+operators+when+comparing+values+of+boxed+primitives
+* [ ] [fix03][PurchaseAmount.java] static 키워드 누락
+* [ ] [fix04][LottoNumberDice.java] private 생성자 누락
