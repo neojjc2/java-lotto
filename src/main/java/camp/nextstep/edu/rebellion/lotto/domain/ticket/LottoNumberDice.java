@@ -17,6 +17,8 @@ public class LottoNumberDice {
                 .forEach(i -> candidateNumbers.add(i));
     }
 
+    private LottoNumberDice() {}
+
     public static List<Integer> roll() {
         Collections.shuffle(candidateNumbers);
         return candidateNumbers

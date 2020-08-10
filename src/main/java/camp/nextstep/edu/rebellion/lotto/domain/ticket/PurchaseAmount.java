@@ -3,8 +3,8 @@ package camp.nextstep.edu.rebellion.lotto.domain.ticket;
 import camp.nextstep.edu.rebellion.lotto.rule.LottoGameRule;
 
 public class PurchaseAmount {
-    private final int LOTTO_PRICE = LottoGameRule.getLottoPrice();
-    private final int LOTTO_PURCHASE_LIMIT = LottoGameRule.getLottoPurchaseLimit();
+    private static final int LOTTO_PRICE = LottoGameRule.getLottoPrice();
+    private static final int LOTTO_PURCHASE_LIMIT = LottoGameRule.getLottoPurchaseLimit();
 
     private final int amount;
     private final int manualCount;
